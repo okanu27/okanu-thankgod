@@ -1,20 +1,18 @@
-
 import navLinks from "../data/navLinks";
 
-
-function Navbar() {
-    
+function Navbar() {   
 return (
-    <nav className="bg-black nav-list">
-        <div>
-            <h1 className="logo">
+    <nav className="flex justify-between items-center px-8 py-5 bg-grey text-black" style={{ boxShadow: "0 0 10px 0 rgba(0, 0, 0, 0.3)"}}>
+        {/*logo*/}
+            <h1 className="text-2x1 font-bold">
                 5Cinemas
             </h1>
-        </div>
-      <ul className="nav-list">
+
+        {/*Navigation Links*/}
+      <ul className="flex gap-8">
         {navLinks.map((link) => (
-            <li key={link.id} className="nav-item">
-                <a href={link.href}>{link.name}</a>
+            <li key={link.id}>
+                <a href={link.href} className="hover:text-blue-400 transition-colors duration-300">{link.name}</a>
             </li>
         ))}
       </ul>

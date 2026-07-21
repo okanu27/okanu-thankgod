@@ -14,10 +14,9 @@ function App() {
     <div className="h-screen text-black">
   
       <Navbar/>
+      <Hero/>
+      <Projects />
       <Footer/>
-      <h1 className="text-3xl font-bold">
-    Hello Developers!
-  </h1>
     </div>
   );
 }

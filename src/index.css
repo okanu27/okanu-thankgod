@@ -1,24 +1,2 @@
 @import "tailwindcss";
 
-.header{
-  font-size: 3.1rem;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
-.nav-list {
-  display: flex;
-  list-style-type: none; /* Removes bullets */
-  margin: 0;
-  padding: 0;
-  gap: 65px; /* Spaces out your navigation links */
-}
-
-.nav-item {
-  text-decoration: none;
-  color: #f5f2f2;
-  font-size: 1.2rem;
-}
-
-.logo{
-  color: white;
-}
