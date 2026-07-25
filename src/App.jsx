@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import './index.css';
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
@@ -10,12 +10,31 @@ import Footer from "./components/Footer";
 import navLinks from "./data/navLinks";
 
 function App() {
+  const [theme, setTheme] = useState("light");
+  const [activeSection, setActiveSection] = useState("home");
+
   return (
-    <div className="h-screen text-black">
+    <div className={`
+          min-h-screen 
+          transition-colors 
+          duration-500 ${
+          theme === "dark"
+            ? "bg-gray-900 text-white"
+            : "bg-white text-black"
+          }`}
+         >
   
-      <Navbar/>
+      <Navbar 
+        theme={theme} 
+        setTheme={setTheme}
+        activeSection={activeSection}
+        setActiveSection={setActiveSection} 
+      />
       <Hero/>
+      <About />
+      <Skills />
       <Projects />
+      <Contact />
       <Footer/>
     </div>
   );

@@ -17,19 +17,19 @@ function ProjectCard({ title, description, tech }) {
                 stiffness: 400,
                 damping: 10 }}
         >
-            <h2 className="text-2xl font-bold mb-3">
-                {title}
-            </h2>
-            <p className="text-gray-600 mb-4">
-                {description}
-            </p>
-            <ul className="flex flex-wrap gap-2 mt-4">
-                {tech.map((item, index) => (
-                <li key={index} className="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm">
-                    {item}
-                </li>
-            ))}
-            </ul>
+                <h2 className="text-2xl font-bold mb-3">
+                    {title}
+                </h2>
+                <p className="text-gray-600 mb-4">
+                    {description}
+                </p>
+                <ul className="flex flex-wrap gap-2 mt-4">
+                    {tech.map((item, index) => (
+                    <li key={index} className="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm">
+                        {item}
+                    </li>
+                    ))}
+                </ul>
             <div className="flex gap-4 mt-6">
                 <Button text="Live Demo" />
                 <Button text="Github" />
