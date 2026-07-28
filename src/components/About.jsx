@@ -48,15 +48,42 @@ const rightVariant = {
 function About() {
     return (
         <motion.section id="about"
-        className="flex flex-col md:flex-row items-center gap-10"
+            className="
+                flex 
+                flex-col 
+                md:flex-row 
+                items-center
+                py-5 
+                gap-10
+                scroll-mt-20
+                px-8
+                "
         variants={itemVariants}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
         >
-            <div className="flex flex-col md:flex-row justify-between gap-6 px-10">
+            <div className="
+                        flex 
+                        flex-col 
+                        md:flex-row 
+                        justify-between
+                        items-center 
+                        gap-10 
+                        px-10
+                        "
+                        >
                 <motion.div variants={leftVariant}>
-                    <div className="w-72 h-72 rounded-full bg-gray-200"></div>
+                    <div className="
+                                w-56 
+                                h-56
+                                md:w-72
+                                md:h-72 
+                                rounded-full 
+                                bg-gray-200
+                                "
+                                >
+                    </div>
                 </motion.div>
 
                 <motion.div 

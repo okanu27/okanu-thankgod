@@ -47,7 +47,8 @@ function Contact() {
 }
 
     return (
-        <section id="contact" className="py-20 px-6">
+        <section id="contact" 
+            className="py-20 px-6">
             <motion.div
                 whileHover={{ y: -5 }}
                 transition={{ duration: 0.3 }} 

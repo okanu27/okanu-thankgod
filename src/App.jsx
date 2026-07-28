@@ -11,7 +11,7 @@ import navLinks from "./data/navLinks";
 
 function App() {
   const [theme, setTheme] = useState("light");
-  const [activeSection, setActiveSection] = useState("home");
+  const [activeSection, setActiveSection] = useState("hero");
 
   return (
     <div className={`
@@ -33,7 +33,7 @@ function App() {
       <Hero/>
       <About />
       <Skills />
-      <Projects />
+      <Projects theme={theme} />
       <Contact />
       <Footer/>
     </div>

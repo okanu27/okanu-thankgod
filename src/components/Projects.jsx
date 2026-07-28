@@ -11,7 +11,7 @@ const containerVariants = {
     },
 };
 
-function Projects() {
+function Projects({ theme }) {
     return (
         <section id="projects" className="py-20">
             <div className="max-w-6xl mx-auto px-6">
@@ -32,6 +32,9 @@ function Projects() {
                         title={project.title}
                         description={project.description}
                         tech={project.tech}
+                        theme={theme}
+                        liveDemo={project.liveDemo}
+                        github={project.github}
                     />
                     ))}
                 </motion.div>

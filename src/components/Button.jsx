@@ -1,12 +1,13 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-function Button({ text, type= "button", className = "", }) {
+function Button({ text, type= "button", className = "", onClick }) {
     return (
         <motion.button
-            type={type} 
+            type={type}
+            onClick={onClick} 
             className={`bg-black text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-all duration-300 ${className} `} 
-            whileHover={{ scale: 1.1 }}
+            whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.95 }}
             transition={{ 
             type: "spring", 

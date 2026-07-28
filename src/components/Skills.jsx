@@ -3,6 +3,7 @@ import skills from "../data/skills";
 import SkillCard from "./SkillCard";
 import { motion } from "framer-motion";
 
+
 const containerVariants = {
     hidden: {},
     visible: {
@@ -20,7 +21,12 @@ function Skills() {
                     My Skills
                 </h2>
                 <motion.div 
-                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+                    className="
+                            grid 
+                            grid-cols-1 
+                            md:grid-cols-2 
+                            lg:grid-cols-3 
+                            gap-6"
                     variants={containerVariants}
                     initial="hidden"
                     whileInView="visible"
@@ -29,8 +35,10 @@ function Skills() {
                     {skills.map((skill) => (
                     <SkillCard
                         key={skill.id}
+                        icon={skill.icon}
                         name={skill.name}
                         level={skill.level}
+                        category={skill.category}
                     /> 
                     ))}
                 </motion.div>

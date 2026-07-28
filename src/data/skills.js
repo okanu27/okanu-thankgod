@@ -1,47 +1,55 @@
 import React from "react";
 
+
+
 const skills = [
     {
         id: 1,
         name: "React",
         level: 25,
-        category: "",
-        featured: "",
+        category: "Frontend",
+        featured: true,
+        icon: "react",
     },
     {
         id: 2,
         name: "JavaScript",
         level: 10,
-        category: "",
-        featured: "",
+        category: "Programming Language",
+        featured: true,
+        icon: "javascript",
     },
     {
         id: 3,
         name: "Node.js",
         level: 50,
-        category: "",
-        featured: "",
+        category: "Backend Runtime",
+        featured: true,
+        icon: "node",
     },
     {
         id: 4,
         name: "Express.js",
         level: 50,
-        category: "",
-        featured: "",
+        category: "Backend Framework",
+        featured: true,
+        icon: "express",
     },
     {
         id: 5,
         name: "Tailwind",
         level: 30,
-        category: "",
-        featured: "",
+        category: "Frontend",
+        featured: true,
+        icon: "tailwind",
     },
     {
         id: 6,
         name: "Postgres",
         level: 40,
-        category: "",
-        featured: "",
+        category: "Database",
+        featured: true,
+        icon: "postgresql",
     },
 ];
 
