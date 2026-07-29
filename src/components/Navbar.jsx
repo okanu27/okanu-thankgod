@@ -65,7 +65,7 @@ function Navbar({
                     >
         {/*logo*/}
             <h1 className="text-2x1 font-bold">
-                5Cinemas
+                ThankGod
             </h1>
 
             {/*Navigation Links*/}
