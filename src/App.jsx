@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useEffect, useState } from "react";
 import './index.css';
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
@@ -10,8 +10,16 @@ import Footer from "./components/Footer";
 import navLinks from "./data/navLinks";
 
 function App() {
-  const [theme, setTheme] = useState("light");
-  const [activeSection, setActiveSection] = useState("hero");
+
+        const [theme, setTheme] = useState(() => {
+            return localStorage.getItem("theme") || "light";
+        });
+
+        useEffect(() => {
+            localStorage.setItem("theme", theme);
+        }, [theme]);
+  
+        const [activeSection, setActiveSection] = useState("hero");
 
   return (
     <div className={`

@@ -3,7 +3,7 @@ import { FaSun, FaMoon } from "react-icons/fa";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { AnimatePresence } from "framer-motion";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 
 function Navbar({
@@ -12,6 +12,35 @@ function Navbar({
     activeSection,
     setActiveSection }) {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    useEffect(() => {
+        const sections = navLinks
+        .map((link) => document.getElementById(link.href.substring(1)))
+        .filter(Boolean);
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                const visibleSection = entries.find((entry) => entry.isIntersecting);
+
+                if (visibleSection) {
+                    setActiveSection(visibleSection.target.id);
+                }
+            },
+             {
+                root: null,
+                rootMargin: "-20% 0px -60% 0px",
+                threshold: 0,
+             }
+        );
+
+        sections.forEach((section) => observer.observe(section));
+
+        return () => {
+            sections.forEach((section) => observer.unobserve(section));
+        };
+    }, [setActiveSection]);
+
+
     console.log(activeSection);      
     return (
         

@@ -1,6 +1,8 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import Button from "./Button";
 import { motion } from "framer-motion";
+import emailjs from "@emailjs/browser";
+
 
 
 const containerVariants = {
@@ -30,20 +32,49 @@ function Contact() {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
+    const [status, setStatus] = useState("");
+
+    useEffect(() => {
+        if (!status) return;
+
+        const timer = setTimeout(() => {
+            setStatus("");
+        }, status.type === "success" ? 4000 : 5000);
+        return () => clearTimeout(timer);
+    }, [status]);
 
 
-    function handleSubmit(e) {
-    e.preventDefault();
+    async function handleSubmit(e) {
+        e.preventDefault();
 
-    console.log({
-        name,
-        email,
-        message,
-    });
+        try {
+            await emailjs.send(
+                "portfolio_gmail",
+                "template_rnf74eg",
+                {
+                    name,
+                    email,
+                    message,
+                },
+                "MdbslndpBYdbxLbPt"
+            );
+            console.log("Message sent successfully!");
+            setStatus({
+                type: "success",
+                message: "Message sent successfully! I'll get back to you soon.",
+                    });
 
-    setName("");
-    setEmail("");
-    setMessage("");
+            setName("");
+            setEmail("");
+            setMessage("");
+
+        } catch (error) {
+            console.log("Failed to send message:", error);
+            setStatus({
+                type: "error",
+                message: "Something went wrong. Please try again.",
+        });
+        }
 }
 
     return (
@@ -213,7 +244,18 @@ function Contact() {
                         type="submit"
                         className="w-full mt-2"
                         />
+                        
                     </motion.div>
+                    {status && (
+                            <p className={`mt-4 text-center text-sm font-medium 
+                                        ${status.type === "success"
+                                            ? "text-green-600 dark:text-green-400"
+                                            : "text-red-600 dark:text-red-400"
+                                        }`}
+                                        >
+                                {status.message}
+                            </p>
+                        )}
             </motion.form>
             </motion.div>
         </section>
