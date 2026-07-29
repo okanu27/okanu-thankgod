@@ -31,7 +31,18 @@ function SkillCard({ icon, name, level, category, theme, setTheme }) {
 
     return (  
         <motion.div 
-            className="bg-white rounded-xl shadow-lg p-6"
+            className={`
+                    rounded-2xl 
+                    shadow-md 
+                    p-6
+                    transition-colors
+                    duration-300
+                    ${
+                        theme === "dark"
+                        ? "bg-gray-800 text-white"
+                        : "bg-white text-gray-900"
+                    }
+                    `}
             whileHover={{ scale: 1.03, y: -5, }}
             transition={{ duration: 0.3 }}
             variants={itemVariants}
@@ -51,14 +62,20 @@ function SkillCard({ icon, name, level, category, theme, setTheme }) {
                                         font-semibold
                                         ${
                                         theme === "dark"
-                                        ? "bg-gray-900 text-white"
-                                        : "bg-white text-black"
+                                        ? "text-white"
+                                        : "text-black"
                                         } 
                                     `}
                                 >       
                                         {name}
                                     </h3>
-                                    <p className="text-sm text-gray-500">
+                                    <p className={`
+                                        ${
+                                            theme === "dark"
+                                            ? "text-gray-400"
+                                            : "text-gray-500"
+                                        }`}
+                                        >
                                         {category}
                                     </p>
                             </div> 

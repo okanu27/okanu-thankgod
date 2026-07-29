@@ -1,6 +1,7 @@
 import React from "react";
 import Button from "./Button";
 import { motion } from "framer-motion";
+import profileImage from "../assets/okanu.webp";
 
 function Hero() {
     return (
@@ -29,38 +30,37 @@ function Hero() {
                      >
                     Hi, I'm <span className="text-blue-700">Thankgod</span>
                     </motion.h1>
-                    <h2 className="text-2x1 text-gray-500 mt-2">
+                    <h2 className="text-x1 sm:text-2xl text-gray-500 mt-2">
                     Fullstack Developer | Content Creator.
                     </h2>
-                    <p className="mt-4 text-lg text-gray-600">
+                    <p className="mt-4 text-base sm:text-lg text-gray-600">
                     I build modern, responsive web applications.
                     </p>
-                    <div className="flex gap-4 mt-6">
-                    <Button className text="View Projects" 
+                    <div className="flex flex-col sm:flex-row gap-4 mt-6">
+                            <Button className="w-full sm:w-auto"
+                                    text="View Projects" 
                                     onClick={() => 
                                         document.getElementById("projects")?.scrollIntoView({
                                             behavior: "smooth",
                                         })
                                     }/>
-                    <Button text="Contact Me"
+                            <Button 
+                                    className="w-full sm:w-auto"
+                                    text="Contact Me"
                                     onClick={() => 
                                         document.getElementById("contact")?.scrollIntoView({
                                             behavior: "smooth",
                                         })
-                                    }/>
+                                    }
+                                    />
                     </div>
                 </div>
-                <div className="
-                            w-56 
-                            h-56
-                            sm:w-64 sm:h-64
-                            lg:w-72 lg:h-72 
-                            rounded-full 
-                            bg-gray-300
-                            "
-                >
+                <div> 
+                        <img src={profileImage}
+                        alt="ThankGod Okanu"
+                        className="w-36 h-36 sm:w-40 sm:h-40 md:w-48 md:h-48 rounded-full object-cover"
+                        />
                </div>
-                
         </section>  
     );
 }

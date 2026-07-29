@@ -40,7 +40,7 @@ function App() {
       />
       <Hero/>
       <About />
-      <Skills />
+      <Skills theme={theme} />
       <Projects theme={theme} />
       <Contact />
       <Footer/>

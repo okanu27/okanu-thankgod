@@ -2,6 +2,7 @@ import React from "react";
 import about from "../data/about";
 import { animate, motion } from "framer-motion";
 import Button from "./Button";
+import profileImage from "../assets/okanu.webp";
 
 const itemVariants = {
     hidden: {
@@ -74,15 +75,17 @@ function About() {
                         "
                         >
                 <motion.div variants={leftVariant}>
-                    <div className="
-                                w-56 
-                                h-56
-                                md:w-72
-                                md:h-72 
-                                rounded-full 
-                                bg-gray-200
-                                "
-                                >
+                    <div>
+                            <img src={profileImage}
+                                    alt="ThankGod Okanu"
+                                    className="
+                                        w-56 
+                                        h-56
+                                        md:w-72
+                                        md:h-72 
+                                        rounded-full 
+                                        object-cover"
+                            />
                     </div>
                 </motion.div>
 

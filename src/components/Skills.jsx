@@ -13,7 +13,7 @@ const containerVariants = {
     },
 };
 
-function Skills() {
+function Skills({ theme }) {
     return (
         <section id="skills" className="py-20">
             <div className="max-w-6xl mx-auto px-6">
@@ -39,6 +39,7 @@ function Skills() {
                         name={skill.name}
                         level={skill.level}
                         category={skill.category}
+                        theme={theme}
                     /> 
                     ))}
                 </motion.div>
