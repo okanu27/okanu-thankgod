@@ -6,7 +6,7 @@ const skills = [
     {
         id: 1,
         name: "React",
-        level: 25,
+        level: 30,
         category: "Frontend",
         featured: true,
         icon: "react",
@@ -14,7 +14,7 @@ const skills = [
     {
         id: 2,
         name: "JavaScript",
-        level: 10,
+        level: 20,
         category: "Programming Language",
         featured: true,
         icon: "javascript",
@@ -45,7 +45,7 @@ const skills = [
     },
     {
         id: 6,
-        name: "Postgres",
+        name: "Postgres, Supabase",
         level: 40,
         category: "Database",
         featured: true,

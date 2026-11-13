@@ -2,27 +2,27 @@
 const navLinks = [
     {   id: 1,
         name: "Home",
-        href: "#hero",
+        href: "hero",
     },
     {
         id: 2,
         name: "About",
-        href: "#about",
+        href: "about",
     },
     {
         id: 3,
         name: "Skills",
-        href: "#skills",
+        href: "skills",
     },
     {
         id: 4,
         name: "Projects",
-        href: "#projects",
+        href: "projects",
     },
     {
         id: 5,
         name: "Contact",
-        href: "#contact",
+        href: "contact",
     },
 ];
 export default navLinks;
