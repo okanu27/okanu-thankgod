@@ -4,7 +4,7 @@ const projects = [
         id: 1,
         title: "THE BINOCULARS",
         description: "A responsive news application built with React",
-        tech: ["React", "Tailwind", "Firebase",],
+        tech: ["React", "Tailwind", "Supabase"],
         liveDemo: "https://the-binoculars.vercel.app",
         github: "https://github.com/okanu27"
 
@@ -21,9 +21,17 @@ const projects = [
         id: 3,
         title: "Portfolio Website",
         description: "My personal developer portfolio.",
-        tech: ["React", "Tailwind", "Framer-Motion"],
+        tech: ["React", "Tailwind", "EmailJS", "Framer-Motion"],
         liveDemo: "https://portfolio-v1-ten-eta.vercel.app",
         github: "https://github.com/okanu27/portfolio-v1"
+    },
+    {
+        id: 4,
+        title: "Journal App",
+        description: "A simple journal app built with React and Supabase, allowing users to create, edit, and delete journal entries.",
+        tech: ["React", "Supabase", "Tailwind"],
+        liveDemo: "https://journalapp1.vercel.app",
+        github: "https://github.com/okanu27/journal-app"
     },
 ];
 
